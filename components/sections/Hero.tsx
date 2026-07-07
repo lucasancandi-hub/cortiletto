@@ -111,7 +111,7 @@ export default function Hero() {
             </Button>
           </span>
           <span data-hero-cta>
-            <Button href="#dove-siamo" variant="ghost">
+            <Button href="#contatti" variant="ghost">
               Dove siamo
             </Button>
           </span>

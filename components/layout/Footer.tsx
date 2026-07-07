@@ -15,15 +15,20 @@ export default function Footer() {
           </span>
           <p className="text-sm leading-relaxed text-smoke">{siteConfig.tagline}</p>
           <div className="flex gap-4 pt-2">
-            {siteConfig.socials.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                className="text-xs font-medium uppercase tracking-[0.2em] text-smoke transition-colors hover:text-gold"
-              >
-                {social.label}
-              </a>
-            ))}
+            {siteConfig.socials
+              .filter((social) => social.href && social.href !== "#")
+              .map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${social.label} (si apre in una nuova scheda)`}
+                  className="text-xs font-medium uppercase tracking-[0.2em] text-smoke transition-colors hover:text-gold"
+                >
+                  {social.label}
+                </a>
+              ))}
           </div>
         </div>
 

@@ -76,7 +76,7 @@ export default function Contatti() {
             title={`Mappa: ${siteConfig.address.full}`}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="h-full w-full grayscale contrast-125 transition-all duration-700 hover:grayscale-0"
+            className="h-full w-full"
           />
         </RevealOnScroll>
       </Container>

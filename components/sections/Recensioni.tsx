@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef } from "react";
 import { motion } from "framer-motion";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -40,8 +39,6 @@ function Star({ filled, delay }: { filled: boolean; delay: number }) {
 }
 
 export default function Recensioni() {
-  const constraintsRef = useRef<HTMLDivElement>(null);
-
   return (
     <section id="recensioni" className="relative scroll-mt-24 overflow-hidden bg-ink-soft py-24 sm:py-32">
       <SectionDivider />
@@ -50,41 +47,39 @@ export default function Recensioni() {
         <SectionHeading
           eyebrow="Recensioni"
           title="Quello che dicono di noi"
-          description="Una selezione di recensioni dai nostri clienti. Trascina per scorrere."
+          description="Una selezione di recensioni dai nostri clienti. Scorri lateralmente per vederle tutte."
         />
 
-        <div ref={constraintsRef} className="overflow-hidden">
-          <motion.div
-            drag="x"
-            dragConstraints={constraintsRef}
-            dragElastic={0.08}
-            className="flex cursor-grab gap-6 active:cursor-grabbing"
-          >
-            {reviews.map((review, index) => (
-              <div
-                key={`${review.name}-${index}`}
-                className="flex w-[300px] shrink-0 flex-col gap-4 rounded-2xl border border-line bg-panel/40 p-6 transition-colors duration-300 hover:border-gold/50 sm:w-[340px]"
-              >
-                <span className="font-display text-4xl leading-none text-gold/70">&ldquo;</span>
+        <div
+          className="-mx-6 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-6 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden"
+          role="list"
+          aria-label="Recensioni dei clienti"
+        >
+          {reviews.map((review, index) => (
+            <div
+              key={`${review.name}-${index}`}
+              role="listitem"
+              className="flex w-[280px] shrink-0 snap-start flex-col gap-4 rounded-2xl border border-line bg-panel/40 p-6 transition-colors duration-300 hover:border-gold/50 sm:w-[340px]"
+            >
+              <span className="font-display text-4xl leading-none text-gold/70">&ldquo;</span>
 
-                <div className="flex gap-1">
-                  {Array.from({ length: 5 }).map((_, starIndex) => (
-                    <Star key={starIndex} filled={starIndex < review.rating} delay={starIndex * 0.06} />
-                  ))}
-                </div>
-
-                <p className="text-sm italic leading-relaxed text-smoke">
-                  Recensione reale da inserire qui: sostituisci questo testo con la recensione autentica
-                  del cliente.
-                </p>
-
-                <div className="mt-auto flex items-center justify-between pt-2 text-xs">
-                  <span className="font-medium uppercase tracking-[0.15em] text-cream">{review.name}</span>
-                  <span className="uppercase tracking-[0.15em] text-smoke">{review.source}</span>
-                </div>
+              <div className="flex gap-1">
+                {Array.from({ length: 5 }).map((_, starIndex) => (
+                  <Star key={starIndex} filled={starIndex < review.rating} delay={starIndex * 0.06} />
+                ))}
               </div>
-            ))}
-          </motion.div>
+
+              <p className="text-sm italic leading-relaxed text-smoke">
+                Recensione reale da inserire qui: sostituisci questo testo con la recensione autentica
+                del cliente.
+              </p>
+
+              <div className="mt-auto flex items-center justify-between pt-2 text-xs">
+                <span className="font-medium uppercase tracking-[0.15em] text-cream">{review.name}</span>
+                <span className="uppercase tracking-[0.15em] text-smoke">{review.source}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </Container>
     </section>

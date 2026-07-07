@@ -50,7 +50,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="#dove-siamo" variant="ghost" className="px-6 py-2.5 text-xs">
+          <Button href="#contatti" variant="ghost" className="px-6 py-2.5 text-xs">
             Prenota un tavolo
           </Button>
         </div>
@@ -98,7 +98,7 @@ export default function Navbar() {
                 </a>
               ))}
             </nav>
-            <Button href="#dove-siamo" variant="primary" onClick={() => setMenuOpen(false)}>
+            <Button href="#contatti" variant="primary" onClick={() => setMenuOpen(false)}>
               Prenota un tavolo
             </Button>
           </motion.div>

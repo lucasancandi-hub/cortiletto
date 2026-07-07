@@ -4,8 +4,8 @@ export const siteConfig = {
   tagline: "Pub cafè nel cuore di Varallo",
   description:
     "Il Cortiletto Pub Cafè: aperitivi, cocktail d'autore e serate senza fretta a Corso Roma 49, Varallo (VC).",
-  // TODO: sostituire con il dominio reale di produzione prima della pubblicazione.
-  url: "https://www.ilcortilettovarallo.it",
+  // Dominio di produzione attuale (Vercel). Aggiornare se in futuro si usa un dominio personalizzato.
+  url: "https://cortiletto.vercel.app",
   address: {
     street: "Corso Roma 49",
     cap: "13019",
@@ -23,6 +23,8 @@ export const siteConfig = {
     { day: "Venerdì – Sabato", time: "17:00 – 02:00" },
     { day: "Domenica", time: "17:00 – 00:00" },
   ],
+  // TODO: inserire i link reali dei profili social. Finché restano "#" i pulsanti
+  // vengono nascosti dal footer (invece di riportare in cima alla pagina).
   socials: [
     { label: "Instagram", href: "#" },
     { label: "Facebook", href: "#" },
