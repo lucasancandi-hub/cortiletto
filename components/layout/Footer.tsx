@@ -16,7 +16,7 @@ export default function Footer() {
           <p className="text-sm leading-relaxed text-smoke">{siteConfig.tagline}</p>
           <div className="flex gap-4 pt-2">
             {siteConfig.socials
-              .filter((social) => social.href && social.href !== "#")
+              .filter((social) => social.href.startsWith("http"))
               .map((social) => (
                 <a
                   key={social.label}

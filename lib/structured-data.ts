@@ -52,6 +52,6 @@ export function buildLocalBusinessJsonLd() {
       addressCountry: "IT",
     },
     openingHoursSpecification: buildOpeningHours(),
-    sameAs: siteConfig.socials.map((social) => social.href).filter((href) => href !== "#"),
+    sameAs: siteConfig.socials.map((social) => social.href).filter((href) => href.startsWith("http")),
   };
 }
