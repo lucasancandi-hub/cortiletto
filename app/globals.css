@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #0b0a08;
+  --color-ink-soft: #14110d;
+  --color-panel: #1c170f;
+  --color-gold: #c9a24a;
+  --color-gold-soft: #e6cd8f;
+  --color-ember: #8a3324;
+  --color-cream: #f3ecdf;
+  --color-smoke: #a89a86;
+  --color-line: rgba(243, 236, 223, 0.12);
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-panel: var(--color-panel);
+  --color-gold: var(--color-gold);
+  --color-gold-soft: var(--color-gold-soft);
+  --color-ember: var(--color-ember);
+  --color-cream: var(--color-cream);
+  --color-smoke: var(--color-smoke);
+  --color-line: var(--color-line);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+}
+
+* {
+  scrollbar-color: var(--color-gold) var(--color-ink-soft);
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-ink);
+}
+
+html {
+  background-color: var(--color-ink);
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+}
+
+.custom-cursor-active,
+.custom-cursor-active * {
+  cursor: none;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 1rem;
+  z-index: 300;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@keyframes drift-a {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, -30px) scale(1.08);
+  }
+}
+
+@keyframes drift-b {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50px, 20px) scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
