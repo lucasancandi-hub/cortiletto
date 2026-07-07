@@ -23,11 +23,9 @@ export const siteConfig = {
     { day: "Venerdì – Sabato", time: "17:00 – 02:00" },
     { day: "Domenica", time: "17:00 – 00:00" },
   ],
-  // TODO: inserire i link reali dei profili social. Finché restano "#" i pulsanti
-  // vengono nascosti dal footer (invece di riportare in cima alla pagina).
   socials: [
-    { label: "Instagram", href: "#" },
-    { label: "Facebook", href: "#" },
+    { label: "Instagram", href: "https://www.instagram.com/ilcortilettocafe/" },
+    { label: "Facebook", href: "https://www.facebook.com/IlCortilettoCafe/?locale=it_IT" },
   ],
   nav: [
     { label: "Home", href: "#home" },
