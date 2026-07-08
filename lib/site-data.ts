@@ -4,8 +4,8 @@ export const siteConfig = {
   tagline: "Pub cafè nel cuore di Varallo",
   description:
     "Il Cortiletto Pub Cafè: aperitivi, cocktail d'autore e serate senza fretta a Corso Roma 49, Varallo (VC).",
-  // Dominio di produzione attuale (Vercel). Aggiornare se in futuro si usa un dominio personalizzato.
-  url: "https://cortiletto.vercel.app",
+  // Dominio ufficiale di produzione.
+  url: "https://ilcortilettocafe.com",
   address: {
     street: "Corso Roma 49",
     cap: "13019",
