@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { MotionConfig } from "framer-motion";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import LenisProvider from "@/components/layout/LenisProvider";
 import Loader from "@/components/layout/Loader";
 import Navbar from "@/components/layout/Navbar";
@@ -100,6 +102,8 @@ export default function RootLayout({
             <Footer />
           </LenisProvider>
         </MotionConfig>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
