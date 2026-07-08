@@ -7,11 +7,39 @@ import AmbientGlow from "@/components/ui/AmbientGlow";
 import SectionDivider from "@/components/ui/SectionDivider";
 
 const reviews = [
-  { name: "[Nome cliente]", source: "Google", rating: 5 },
-  { name: "[Nome cliente]", source: "TripAdvisor", rating: 5 },
-  { name: "[Nome cliente]", source: "Google", rating: 4 },
-  { name: "[Nome cliente]", source: "Google", rating: 5 },
-  { name: "[Nome cliente]", source: "TripAdvisor", rating: 5 },
+  {
+    name: "Mark Flour",
+    source: "Google",
+    rating: 5,
+    quote:
+      "Posticino molto carino e tranquillo anche all'aperto, diversi tavolini all'ombra. Personale gentile, professionale e veloce, bagni puliti, posteggi nelle vicinanze. Lo consiglio vivamente.",
+  },
+  {
+    name: "Annamaria Teruggi",
+    source: "Google",
+    rating: 5,
+    quote:
+      "Ambiente caratteristico, originale e gradevole. Molto belli i tavolini all'aperto, ottimi i cocktail. Le ragazze gentili e cordiali.",
+  },
+  {
+    name: "Osvaldo Fuselli",
+    source: "Google",
+    rating: 5,
+    quote: "Tutto bello, personale cortese. C'è solo una pecca: sono juventini!",
+  },
+  {
+    name: "Maria Grazia Abrami",
+    source: "Google",
+    rating: 5,
+    quote: "Sempre un bel locale, titolare sempre gentile e cordiale.",
+  },
+  {
+    name: "Carmen Farina",
+    source: "Google",
+    rating: 4,
+    quote:
+      "Ci siamo state a colazione… Consigliato per il prezzo e la possibilità del latte senza lattosio.",
+  },
 ];
 
 function Star({ filled, delay }: { filled: boolean; delay: number }) {
@@ -69,10 +97,7 @@ export default function Recensioni() {
                 ))}
               </div>
 
-              <p className="text-sm italic leading-relaxed text-smoke">
-                Recensione reale da inserire qui: sostituisci questo testo con la recensione autentica
-                del cliente.
-              </p>
+              <p className="text-sm italic leading-relaxed text-smoke">{review.quote}</p>
 
               <div className="mt-auto flex items-center justify-between pt-2 text-xs">
                 <span className="font-medium uppercase tracking-[0.15em] text-cream">{review.name}</span>

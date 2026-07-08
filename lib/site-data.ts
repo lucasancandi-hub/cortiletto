@@ -14,9 +14,9 @@ export const siteConfig = {
     full: "Corso Roma 49, 13019 Varallo (VC)",
     mapsQuery: "Corso Roma 49, 13019 Varallo VC",
   },
-  // TODO: sostituire con i recapiti reali del locale prima della pubblicazione.
-  phone: "+39 0163 00 00 00",
-  phoneHref: "+390163000000",
+  phone: "+39 331 211 7317",
+  phoneHref: "+393312117317",
+  // TODO: sostituire con l'email reale del locale (ancora un segnaposto).
   email: "info@ilcortilettovarallo.it",
   hours: [
     { day: "Lunedì – Giovedì", time: "17:00 – 00:00" },
