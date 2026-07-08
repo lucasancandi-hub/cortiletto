@@ -16,7 +16,10 @@ export const siteConfig = {
   },
   phone: "+39 331 211 7317",
   phoneHref: "+393312117317",
-  // TODO: sostituire con l'email reale del locale (ancora un segnaposto).
+  // Numero WhatsApp in formato internazionale senza "+" (per i link wa.me).
+  whatsapp: "393312117317",
+  // TODO: email reale non ancora disponibile — al momento i contatti passano
+  // da telefono e WhatsApp, quindi questo indirizzo non viene mostrato nel sito.
   email: "info@ilcortilettovarallo.it",
   hours: [
     { day: "Lunedì – Giovedì", time: "17:00 – 00:00" },
@@ -49,3 +52,11 @@ export const siteConfig = {
     { label: "Contatti", href: "#contatti" },
   ],
 } as const;
+
+/**
+ * Link WhatsApp con messaggio di prenotazione già compilato: aprendolo si avvia
+ * una chat verso il numero del locale con data/orario/persone/nome da completare.
+ */
+export const whatsappReservationHref = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
+  "Ciao! Vorrei prenotare un tavolo al Cortiletto Pub Cafè.\n\nData:\nOrario:\nPersone:\nNome:"
+)}`;

@@ -6,7 +6,7 @@ import ParallaxLayer from "@/components/ui/ParallaxLayer";
 import PlaceholderImage from "@/components/ui/PlaceholderImage";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 import SectionDivider from "@/components/ui/SectionDivider";
-import { siteConfig } from "@/lib/site-data";
+import { siteConfig, whatsappReservationHref } from "@/lib/site-data";
 
 export default function Contatti() {
   const mapsSrc = `https://www.google.com/maps?q=${encodeURIComponent(
@@ -51,8 +51,13 @@ export default function Contatti() {
               <a href={`tel:${siteConfig.phoneHref}`} className="text-sm text-smoke transition-colors hover:text-gold">
                 {siteConfig.phone}
               </a>
-              <a href={`mailto:${siteConfig.email}`} className="text-sm text-smoke transition-colors hover:text-gold">
-                {siteConfig.email}
+              <a
+                href={whatsappReservationHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-smoke transition-colors hover:text-gold"
+              >
+                WhatsApp
               </a>
             </div>
           </div>
@@ -61,8 +66,13 @@ export default function Contatti() {
             <Button href={`tel:${siteConfig.phoneHref}`} variant="primary">
               Chiama ora
             </Button>
-            <Button href={`mailto:${siteConfig.email}`} variant="ghost">
-              Scrivici
+            <Button
+              href={whatsappReservationHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="ghost"
+            >
+              Prenota su WhatsApp
             </Button>
           </div>
         </GlassCard>

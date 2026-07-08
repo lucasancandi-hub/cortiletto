@@ -1,5 +1,5 @@
 import Container from "@/components/ui/Container";
-import { siteConfig } from "@/lib/site-data";
+import { siteConfig, whatsappReservationHref } from "@/lib/site-data";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -42,8 +42,13 @@ export default function Footer() {
           <a href={`tel:${siteConfig.phoneHref}`} className="text-sm text-smoke transition-colors hover:text-gold">
             {siteConfig.phone}
           </a>
-          <a href={`mailto:${siteConfig.email}`} className="text-sm text-smoke transition-colors hover:text-gold">
-            {siteConfig.email}
+          <a
+            href={whatsappReservationHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-smoke transition-colors hover:text-gold"
+          >
+            WhatsApp
           </a>
         </div>
 
