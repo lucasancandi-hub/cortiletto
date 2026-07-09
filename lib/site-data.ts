@@ -22,9 +22,13 @@ export const siteConfig = {
   // da telefono e WhatsApp, quindi questo indirizzo non viene mostrato nel sito.
   email: "info@ilcortilettovarallo.it",
   hours: [
-    { day: "Lunedì – Giovedì", time: "17:00 – 00:00" },
-    { day: "Venerdì – Sabato", time: "17:00 – 02:00" },
-    { day: "Domenica", time: "17:00 – 00:00" },
+    { day: "Lunedì", time: "07:00 – 00:30" },
+    { day: "Martedì", time: "06:30 – 00:00" },
+    { day: "Mercoledì", time: "07:00 – 00:00" },
+    { day: "Giovedì", time: "07:00 – 00:00" },
+    { day: "Venerdì", time: "07:00 – 02:00" },
+    { day: "Sabato", time: "07:30 – 02:00" },
+    { day: "Domenica", time: "08:00 – 00:00" },
   ],
   socials: [
     { label: "Instagram", href: "https://www.instagram.com/ilcortilettocafe/" },
