@@ -36,22 +36,17 @@ export const siteConfig = {
   ],
   nav: [
     { label: "Home", href: "#home" },
+    { label: "Contatti", href: "#contatti" },
     { label: "Chi Siamo", href: "#chi-siamo" },
-    { label: "Menu", href: "#cocktail" },
     { label: "Gallery", href: "#gallery" },
     { label: "Recensioni", href: "#recensioni" },
-    { label: "Contatti", href: "#contatti" },
   ],
   footerNav: [
     { label: "Home", href: "#home" },
+    { label: "Contatti", href: "#contatti" },
     { label: "Chi Siamo", href: "#chi-siamo" },
-    { label: "Cocktail", href: "#cocktail" },
-    { label: "Birre", href: "#birre" },
-    { label: "Aperitivi", href: "#aperitivi" },
-    { label: "Food", href: "#food" },
     { label: "Gallery", href: "#gallery" },
     { label: "Recensioni", href: "#recensioni" },
-    { label: "Contatti", href: "#contatti" },
   ],
 } as const;
 

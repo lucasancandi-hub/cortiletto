@@ -18,7 +18,9 @@ export default function Contatti() {
       <SectionDivider />
       <ParallaxLayer speed={0.15} className="pointer-events-none absolute inset-x-0 -top-24 h-[130%] opacity-25">
         <PlaceholderImage
-          label="Scorcio serale di Corso Roma con l'insegna del Cortiletto visibile in lontananza, luci della via, effetto lungo esposizione"
+          label="Atmosfera serale del Cortiletto a Varallo"
+          src="/foto/hero.jpg"
+          objectPosition="center"
           fill
           className="h-full w-full rounded-none border-0"
         />

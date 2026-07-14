@@ -61,7 +61,9 @@ export default function ChiSiamo() {
         <div className="relative w-full flex-1">
           <MaskReveal axis="x" origin="right center" panelClassName="bg-ink-soft" className="w-full rounded-2xl">
             <PlaceholderImage
-              label="Bancone in legno visto di tre quarti, bottiglie retroilluminate sullo sfondo, un barman in camicia scura che prepara un drink"
+              label="La caratteristica veranda in legno e vetro del Cortiletto, illuminata di sera"
+              src="/foto/chi-siamo.jpg"
+              objectPosition="center"
               aspect="4/5"
               className="h-full w-full rounded-none border-0"
             />

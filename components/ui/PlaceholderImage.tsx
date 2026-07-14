@@ -1,5 +1,11 @@
 type PlaceholderImageProps = {
   label: string;
+  /** Se presente, mostra la foto reale al posto del segnaposto. */
+  src?: string;
+  /** Es. "center top" / "center 40%" per scegliere quale parte inquadrare. */
+  objectPosition?: string;
+  /** Carica subito (per immagini above-the-fold come l'hero). */
+  priority?: boolean;
   aspect?: string;
   fill?: boolean;
   className?: string;
@@ -7,17 +13,39 @@ type PlaceholderImageProps = {
 
 export default function PlaceholderImage({
   label,
+  src,
+  objectPosition,
+  priority = false,
   aspect,
   fill = false,
   className = "",
 }: PlaceholderImageProps) {
+  const wrapper = `relative overflow-hidden ${
+    fill ? "absolute inset-0 h-full w-full" : "rounded-2xl border border-line"
+  } ${className}`;
+  const style = !fill && aspect ? { aspectRatio: aspect } : undefined;
+
+  if (src) {
+    return (
+      <div title={label} className={`${wrapper} bg-ink`} style={style}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={src}
+          alt={label}
+          loading={priority || fill ? "eager" : "lazy"}
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover"
+          style={objectPosition ? { objectPosition } : undefined}
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       title={label}
-      className={`relative overflow-hidden bg-gradient-to-br from-panel via-ink-soft to-ink ${
-        fill ? "absolute inset-0 h-full w-full" : "rounded-2xl border border-line"
-      } ${className}`}
-      style={!fill && aspect ? { aspectRatio: aspect } : undefined}
+      className={`${wrapper} bg-gradient-to-br from-panel via-ink-soft to-ink`}
+      style={style}
     >
       <div className="absolute inset-0 opacity-[0.05] [background-image:repeating-linear-gradient(45deg,var(--color-cream)_0,var(--color-cream)_1px,transparent_1px,transparent_12px)]" />
 

@@ -10,46 +10,36 @@ import SectionDivider from "@/components/ui/SectionDivider";
 
 const photos = [
   {
-    label: "Vista panoramica del cortile interno allestito per la sera, luci a filamento tese tra i muri, tavoli quasi tutti occupati",
+    src: "/foto/gallery-1.jpg",
+    label: "Il bancone e la caratteristica veranda in legno e vetro del Cortiletto di sera",
     aspect: "16/9",
     span: "sm:col-span-2",
     axis: "x" as const,
     origin: "left center",
   },
   {
-    label: "Primo piano delle mani del bartender mentre guarnisce un cocktail con un twist di agrume",
-    aspect: "1/1",
-    span: "",
+    src: "/foto/gallery-3.jpg",
+    label: "La sala interna del Cortiletto con travi in legno, panche e tavoli",
+    aspect: "4/5",
+    span: "sm:row-span-2",
     axis: "y" as const,
     origin: "center top",
   },
   {
-    label: "Gruppo di clienti che ridono a un tavolo, inquadratura laterale, atmosfera conviviale e luci calde",
-    aspect: "4/5",
-    span: "sm:row-span-2",
-    axis: "x" as const,
-    origin: "right center",
-  },
-  {
-    label: "Dettaglio del bancone con fila di bottiglie di distillati retroilluminate e insegna al neon del logo sullo sfondo",
+    src: "/foto/gallery-2.jpg",
+    label: "Interno rustico del locale con le tipiche panche in legno e lo schermo",
     aspect: "1/1",
     span: "",
     axis: "y" as const,
     origin: "center bottom",
   },
   {
-    label: "Ingresso del Cortiletto di sera, insegna accesa, porta socchiusa, persone che entrano",
-    aspect: "4/5",
-    span: "sm:row-span-2",
-    axis: "x" as const,
-    origin: "left center",
-  },
-  {
-    label: "Staff al completo dietro al bancone in posa informale, sorridenti, con la divisa del locale",
+    src: "/foto/gallery-4.jpg",
+    label: "Il dehors del Cortiletto animato in una serata estiva",
     aspect: "1/1",
     span: "",
-    axis: "y" as const,
-    origin: "center top",
+    axis: "x" as const,
+    origin: "right center",
   },
 ];
 
@@ -84,6 +74,7 @@ export default function Gallery() {
               >
                 <PlaceholderImage
                   label={photo.label}
+                  src={photo.src}
                   aspect={photo.aspect}
                   className="h-full w-full rounded-2xl border-0 transition-transform duration-500 group-hover:scale-105"
                 />
@@ -111,7 +102,12 @@ export default function Gallery() {
               className="relative w-full max-w-2xl"
               onClick={(event) => event.stopPropagation()}
             >
-              <PlaceholderImage label={photos[openIndex].label} aspect="4/3" className="w-full" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={photos[openIndex].src}
+                alt={photos[openIndex].label}
+                className="max-h-[80vh] w-full rounded-2xl border border-line bg-ink object-contain"
+              />
               <button
                 type="button"
                 onClick={() => setOpenIndex(null)}

@@ -79,7 +79,10 @@ export default function Hero() {
     >
       <div ref={bgRef} className="absolute inset-0">
         <PlaceholderImage
-          label="Facciata del Cortiletto al blue hour: insegna al neon accesa, tavolini del dehors illuminati da lampadine a filamento, porta d'ingresso aperta con luce calda che fuoriesce"
+          label="Il cortile del Cortiletto Pub Cafè a Varallo di sera: tavolini illuminati, atmosfera calda e conviviale"
+          src="/foto/hero.jpg"
+          priority
+          objectPosition="center"
           fill
           className="scale-110"
         />
