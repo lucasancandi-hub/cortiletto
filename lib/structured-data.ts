@@ -42,6 +42,7 @@ export function buildLocalBusinessJsonLd() {
     url: siteConfig.url,
     image: `${siteConfig.url}/opengraph-image`,
     telephone: siteConfig.phone,
+    vatID: siteConfig.vat,
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.street,

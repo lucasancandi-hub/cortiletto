@@ -87,6 +87,7 @@ export default function Footer() {
           <span>
             © {year} {siteConfig.fullName}. Tutti i diritti riservati.
           </span>
+          <span>P.IVA {siteConfig.vat}</span>
           <span>{siteConfig.address.full}</span>
         </Container>
       </div>

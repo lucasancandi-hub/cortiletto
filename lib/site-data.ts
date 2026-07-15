@@ -14,6 +14,7 @@ export const siteConfig = {
     full: "Corso Roma 49, 13019 Varallo (VC)",
     mapsQuery: "Corso Roma 49, 13019 Varallo VC",
   },
+  vat: "02153520024",
   phone: "+39 331 211 7317",
   phoneHref: "+393312117317",
   // Numero WhatsApp in formato internazionale senza "+" (per i link wa.me).

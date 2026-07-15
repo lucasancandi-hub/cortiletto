@@ -11,7 +11,7 @@ import SectionDivider from "@/components/ui/SectionDivider";
 const photos = [
   {
     src: "/foto/gallery-1.jpg",
-    label: "Il bancone e la caratteristica veranda in legno e vetro del Cortiletto di sera",
+    label: "Il bancone illuminato del Cortiletto e i tavoli del dehors in una serata piena",
     aspect: "16/9",
     span: "sm:col-span-2",
     axis: "x" as const,
@@ -19,7 +19,7 @@ const photos = [
   },
   {
     src: "/foto/gallery-3.jpg",
-    label: "La sala interna del Cortiletto con travi in legno, panche e tavoli",
+    label: "Serata affollata sotto gli ombrelloni del dehors, con la partita sugli schermi",
     aspect: "4/5",
     span: "sm:row-span-2",
     axis: "y" as const,
@@ -27,7 +27,7 @@ const photos = [
   },
   {
     src: "/foto/gallery-2.jpg",
-    label: "Interno rustico del locale con le tipiche panche in legno e lo schermo",
+    label: "La caratteristica veranda in legno e vetro del Cortiletto, illuminata di sera",
     aspect: "1/1",
     span: "",
     axis: "y" as const,
@@ -35,7 +35,7 @@ const photos = [
   },
   {
     src: "/foto/gallery-4.jpg",
-    label: "Il dehors del Cortiletto animato in una serata estiva",
+    label: "La sala interna del Cortiletto con travi in legno, panche e tavoli",
     aspect: "1/1",
     span: "",
     axis: "x" as const,

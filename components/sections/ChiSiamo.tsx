@@ -61,7 +61,7 @@ export default function ChiSiamo() {
         <div className="relative w-full flex-1">
           <MaskReveal axis="x" origin="right center" panelClassName="bg-ink-soft" className="w-full rounded-2xl">
             <PlaceholderImage
-              label="La caratteristica veranda in legno e vetro del Cortiletto, illuminata di sera"
+              label="Il cortile del Cortiletto al blue hour, con i tavolini all'aperto animati e il bancone illuminato"
               src="/foto/chi-siamo.jpg"
               objectPosition="center"
               aspect="4/5"

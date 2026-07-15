@@ -79,7 +79,7 @@ export default function Hero() {
     >
       <div ref={bgRef} className="absolute inset-0">
         <PlaceholderImage
-          label="Il cortile del Cortiletto Pub Cafè a Varallo di sera: tavolini illuminati, atmosfera calda e conviviale"
+          label="Il dehors del Cortiletto Pub Cafè a Varallo al blue hour: ombrelloni illuminati, tavoli animati e bancone con luci calde"
           src="/foto/hero.jpg"
           priority
           objectPosition="center"
